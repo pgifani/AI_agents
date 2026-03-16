@@ -124,7 +124,6 @@ Create a `.env` file inside **each agent folder** you want to run:
 
 ```env
 GOOGLE_GENAI_USE_VERTEXAI=0
-GOOGLE_API_KEY=
 GROQ_API_KEY=gsk_your_groq_key_here
 ```
 
