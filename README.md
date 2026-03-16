@@ -209,22 +209,10 @@ rmdir /s /q multi_agent\__pycache__
 
 ---
 
-## 🔧 Troubleshooting
-
-| Error | Cause | Fix |
-|-------|-------|-----|
-| `adk not recognized` | Scripts folder not in PATH | Add Scripts path to PATH, restart terminal |
-| `Invalid API Key` | Wrong `.env` variable name | Use `GROQ_API_KEY=`, not `GOOGLE_API_KEY=` |
-| `model decommissioned` | Old model name | Use `groq/llama-3.3-70b-versatile` |
-| `tool_use_failed` | Cached old code | Delete `__pycache__` folder and restart |
-| `limit: 0` on Gemini | No Gemini quota | Switch to Groq (already configured) |
-| Agent not updating | Old cache loaded | Run `rmdir /s /q <agent>\__pycache__` |
-
----
 
 ## 📝 Notes
 
-- **Tehran** uses a `+3:30` half-hour timezone offset — handled correctly by `pytz` with `"Asia/Tehran"`
+
 - **Weather data** is updated every few minutes by Open-Meteo and requires no API key
 - **Groq free tier** provides 14,400 requests/day and 6,000 tokens/minute — more than enough for development and testing
 - **`sub_agents`** with `transfer_to_agent` are not supported by Groq — both tools live in a single `root_agent`
